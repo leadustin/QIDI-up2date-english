@@ -1,19 +1,19 @@
 # **Qidi Up2date**
-In diesem Repository geht es um  die Aktualisierung der Qidi Serie 3 auf die aktuellste Software inkl. einiger nützlicher und optionaler Tools sowie den Umbau des originalen Displays auf ein neues Display auf dem Klipperscreen läuft.
-Derzeit sind die Guides mit dem Qidi X-Max 3 und dem X-Plus 3 kompatibel.
+This repository is about updating the Qidi Series 3 to the latest software including some useful and optional tools as well as the conversion of the original display to a new display running on the Klipperscreen.
+Currently the guides are compatible with the Qidi X-Max 3 and the X-Plus 3.
 
-Für den kompletten Umbau des Druckers sollte man diesem Guide folgen. Hier wird beschrieben, wie die alte Software des Druckers auf die jeweils aktuellste Version aktualisiert wird.
-+ [Total-Umbau](Klipper-Update/update+upgrade.md)
+For the complete conversion of the printer, you should follow this guide. It describes how to update the printer's old software to the latest version.
++ [Total conversion](Klipper-Update/update+upgrade.md)
 
-Mit diesem Macro lässt sich der für den Display-Tausch verwendete Raspberry Pi aus Mainsail sicher herunterfahren.
-+ [Macro Klipperscreen-Shutdown](Klipperscreen-Shutdown/README.md)
+With this macro, the Raspberry Pi used for the display swap can be safely shut down from Mainsail.
++ [Macro Klipperscreen-shutdown](Klipperscreen-Shutdown/README.md)
 
-Wer ein automatisiertes Backup alle Configs, Macros etc. auf seinem eigenen Github Repository erstellen möchte, findet hier eine Lösung.
-+ [Automatisches Backup](Git-Backup/Autobackup.md)
+If you want to create an automated backup of all configs, macros etc. on your own Github repository, you will find a solution here.
++ [Automatic backup](Git-Backup/Autobackup.md)
 
-Hier gibt es 3D-Modelle des Druckkopfs sowie der Baugruppen der XY-Achsen
-+ [3D-Modelle](3D-Modelle/3D-Modelle.md)
+3D models of the print head and the assemblies of the XY axes are available here
++ [3D-Models](3D-Modelle/3D-Modelle.md)
 
-Wenn dir meine Arbeit gefällt kannst du mich gern unterstützen
+If you like my work, you are welcome to support me
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G7VMD0W)
