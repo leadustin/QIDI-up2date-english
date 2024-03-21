@@ -1,7 +1,7 @@
 # **Shutdown Klipperscreen**
 > [!NOTE]
 > This macro is only useful if you have followed the procedure described in [Total conversion](Klipper-Update/update+upgrade.md) regarding the display replacement! 
-## **Installation of a macro to shut down the Raspberry running Klipperscreen via macro **.
+## **Installation of a macro to shut down the Raspberry running Klipperscreen via macro.**
 
 With this macro, the Raspberry Pi can be shut down conveniently from Mainsail. This is useful if the printer is set up away from the PC.
 The power supply runs via a smart plug from Ikea and is integrated via Alexa. The printer is in the basement and is therefore conveniently switched off via app or voice command. Other smart plugs also work.
