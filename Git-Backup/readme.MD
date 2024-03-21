@@ -4,7 +4,7 @@ To make it easier to follow the guide, all console commands are prepared for cop
 > [!IMPORTANT]
 > The access token shown in this guide and the repository were only created for this guide. Both have already been deleted. Just in case someone tries to gain access with this data. 😄
 
-## **WWhat is needed?**
+## **What is needed?**
 + a 3D printer
 + Putty for an SSH connection
 + an account at Github (which we create in this guide)
