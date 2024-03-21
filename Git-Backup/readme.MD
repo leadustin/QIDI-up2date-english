@@ -44,139 +44,139 @@ The next steps are naming, access authorization and various other settings.
 5. create repository
    + Click on "create repository" to create your own repository.
     
-![Initialisierung](/../main/images/backup3.png)
+![Initialization](/../main/images/backup3.png)
 
-Nach Erstellung des Repository erfolgt eine Weiterleitung zum derzeitigen "Root-Verzeichnis". 
-Kopiert die HTTPS-URL eurers Repository und fügt diese in einen Texteditor eurer Wahl ein. 
+After creating the repository, you will be redirected to the current "root directory". 
+Copy the HTTPS URL of your repository and paste it into a text editor of your choice. 
 
 ![HTTPS-URL](/../main/images/backup4.png)
 
-## **Zugriffs-Token erstellen**
-Um Zugriff auf das Repository über den Drucker zu erhalten, benötigen wir ein "access token" welches wir <a href="https://github.com/settings/tokens">hier</a> erstellen.
-+ Auf "Generate new  token" klicken.
-+ "Generate new token (classic) wählen.
+## **Create access token**
+To gain access to the repository via the printer, we need an "access token" which we create <a href="https://github.com/settings/tokens">here</a>.
++ Click on "Generate new token".
++ Select "Generate new token (classic).
 
-![Token-Auswahl](/../main/images/backup5.png)
+![Token selection](/../main/images/backup5.png)
 
-Im nächsten Schritt wird das Token mit entsprechenden Zugriffsrechten konfiguriert.
-1. Namen des Tokens
-   + Unter "Note" wählt ihr einen passenden Namen, welcher mit eurem Drucker in Verbindung gebracht werden kann.
-2. Gültigkeitsdauer
-   + Unter Expiration "No expiration" auswählen.
+In the next step, the token is configured with the corresponding access rights.
+1. name of the token
+   + Under "Note", select a suitable name that can be associated with your printer.
+2. validity period
+   + Select "No expiration" under Expiration.
 > [!TIP]
-> Wer mag kann hier auch einen Zeitraum wählen nach dem das Zugriffs-Token seine Gültigkeit verliert. Nach Ablauf dieser Zeitspanne ist kein Zugriff auf das Repository durch den Drucker möglich und das Token muss erneuert werden.
-3. Zugriffsbereiche wählen
-   + Für die Definierung der Zugriffsbereiche nur "workflow" und "read:org" wählen.
-4. Abschluss Konfiguration
-   + Ganz nach unten scrollen und auf "Generate token" klicken.
+> If you like, you can also select a period of time after which the access token loses its validity. After this period, the printer cannot access the repository and the token must be renewed.
+3. select access areas
+   + Select only "workflow" and "read:org" to define the access areas.
+4. finalize configuration
+   + Scroll all the way down and click on "Generate token".
 
-![Token-Auswahl](/../main/images/backup7.png)
+![Token-Selection](/../main/images/backup7.png)
 
-5. Sicherung des Tokens
-   + Nach dem das Token erstellt wurde, befinden wir uns in der Verwaltungsübersicht aller bisher erstellten Tokens.
+5. Securing the token
+   + After the token has been created, we find ourselves in the administration overview of all tokens created so far.
 > [!CAUTION]
-> Dies ist der einzige Moment in dem ihr eurer Token auf Github sehen werden! Es ist wichtig, dass das Token entsprechend gesichert wird, da es nicht von Github wiederhergestellt werden kann! Sollte der Zugriff auf dieses Token verloren gehen, muss ein neues erstellt werden. Fall jemand auf die Idee kommen sollte, das Token in Github hochzuladen - vergesst diese Idee. Github erkennt das Token und wird es löschen!
+> This is the only time you will see your token on Github! It is important that the token is backed up accordingly, as it cannot be restored from Github! If access to this token is lost, a new one must be created. If someone has the idea of uploading the token to Github - forget this idea. Github recognizes the token and will delete it!
 
-![Token-Auswahl](/../main/images/backup8.png)
+![Token-Selection](/../main/images/backup8.png)
 
-Kopiert das Token in die Text-Datei in die ihr die HTTPS-URL euers Repository kopiert habt.
+Copy the token into the text file into which you have copied the HTTPS URL of your repository.
 
 ![Token in Notepad](/../main/images/backup9.png)
 
-## **Kombinieren der HTTPS-URL mit dem Token**
-Als nächster Schritt müssen Token und URL kombiniert werden.
-+ Fügt in der URL hinter den beiden **//** ein **@** ein.
-+ Kopiert euer Token in die Zwischenablage und fügt das Token zwischen **//** und dem **@** ein. Das nachfolgende Bild zeigt wie die URL aussehen muss.
+## **Combining the HTTPS URL with the token**
+The next step is to combine the token and URL.
++ Insert a **@** after the two **//** in the URL.
++ Copy your token to the clipboard and insert the token between **//** and **@**. The following image shows how the URL should look.
 > [!NOTE]
->  Nur noch mal zur Erinnerung. Das für diesen Guide erstellte Repository und Token wurden nach Erstellung der Anleitung gelöscht!
+>  Just a reminder. The repository and token created for this guide were deleted after the guide was created!
 
 ![Token+URL](/../main/images/backup10.png)
 
-## **Verbindung zum Drucker per SSH**
-Mit dem Tool euer Wahl per SSH auf den Drucker verbinden. Ich benutze in diesem Guide "Putty"
-+ mit folgendem Befehl das Verzeichnis wechseln
+## **Connect to the printer via SSH**
+Connect to the printer via SSH using the tool of your choice. I use "Putty" in this guide
++ change the directory with the following command
 
   ```bash
   cd ~/printer_data/config
   ```
 
-+ mit nachfolgendem Befehl wird das autocommit-Script heruntergeladen
++ the autocommit script is downloaded with the following command
 
   ```bash
   wget -O ~/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
   ```
 
-+ Als nächstes wird die bevorzugte Weboberfläche ausgewählt. Wer Mainsail benutzt, entfernt die # in der Mainsail-Zeile. Wer Fluidd nutzt entsprechend bei Fluidd. Dafür öffnen wir mit folgendem Befehl die autocommit.sh
++ The next step is to select the preferred web interface. If you use Mainsail, remove the # in the Mainsail line. If you use Fluidd, select Fluidd accordingly. To do this, we open autocommit.sh with the following command
 
   ```bash
   nano ~/printer_data/config/autocommit.sh
   ```
-+ Nachfolgendes Bild zeigt die Konfiguration für Mainsail. Fluidd ist entsprechend auskommentiert.
++ The following image shows the configuration for Mainsail. Fluidd is commented out accordingly.
 
 ![MainsailoderFluidd](/../main/images/backup11.png)
 
-+ Die autocommit.sh mit STRG+O und danach Enter speichern
-+ STRG+X schließt den Editor und wir befinden uns wieder im Pfad "printer_data/config/"
-+ Mit nachfolgenden Befehl geben wir uns sowie allen anderen Usern des Systems die Berechtigung die autocommit.sh auszuführen
++ Save the autocommit.sh with CTRL+O and then Enter
++ CTRL+X closes the editor and we are back in the path "printer_data/config/"
++ With the following command we give ourselves and all other users of the system the authorization to execute the autocommit.sh
 
   ```bash
   chmod +x autocommit.sh
   ```
-+ Mit folgenden Befehl prüfen ob die Berechtigungen, wie auf dem nachfolgenden Bild gezeigt, richtig gesetzt sind.
++ Use the following command to check whether the authorizations are set correctly, as shown in the following image.
   ```bash
   ls -la autocommit.sh
   ```
-![Berechtigungen](/../main/images/backup12.png)
+![Authorizations](/../main/images/backup12.png)
 
-+ Für den Export und Backup der data.mdb benötigen wir noch ein weiteres Tool, welches mit nachfolgenden Befehl installiert wird.
++ For the export and backup of the data.mdb we need another tool, which is installed with the following command.
 
   ```bash
   sudo apt install lmdb-utils
   ```
 > [!IMPORTANT]
-> In den Standard-Einstellungen werden ALLE Tabellen der data.mbd im Repository gesichert. Wer mit API-Schlüsseln und anderen Benutzerdaten arbeitet kann dies verhindern, in dem in der "autocommit.sh" der Bereich "history_only" auf "true" gesetzt wird.
+> In the default settings, ALL data.mbd tables are saved in the repository. If you work with API keys and other user data, you can prevent this by setting the "history_only" section in "autocommit.sh" to "true".
 
-## **Backup auf Github vorbereiten**
-Um Github auf das Backup unserer Daten vorzubereiten, müssen wir folgenden Befehl in die Konsole einfügen:
+## **Prepare backup on Github**
+To prepare Github for the backup of our data, we need to add the following command to the console:
 
 ```bash
 git init -b main
 ```
 ![Github initialisieren](/../main/images/backup13.png)
 
-Nun müssen wir Git mitteilen über welche URL auf unser Repository zugegriffen werden soll.
-+ nachfolgenden Text in die Zwischenablage kopieren und in die Textfile vor die Token-URL einfügen:
+Now we need to tell Git which URL to use to access our repository.
++ Copy the following text to the clipboard and paste it into the text file before the token URL:
   ```bash
   git remote add origin
   ```
 ![Git-URL](/../main/images/backup14.png)
 
-+ Den in der Textfile erstellten Befehl aus dem vorherigen Bild in die Konsole eingeben.
-+ Als nächstes erfolgt eine Verifizierung mit folgendem Befehl:
++ Enter the command created in the text file from the previous screen into the console.
++ The next step is verification with the following command:
   
   ```bash
   git remote -v
   ```
-![Verifizierung](/../main/images/backup15.png)
+![Verification](/../main/images/backup15.png)
 
-+ Nun müssen wir Git noch unsere Email sowie euren Namen mitteilen. Dabei handelt es sich um die Email und den Namen, den ihr bei Github verwendet. Dafür werden folgende Befehle verwendet, die entsprechend mit euren Daten ergänzt werden. 
++ Now we need to tell Git our email and your name. This is the email and the name you use at Github. The following commands are used for this, which are supplemented with your data accordingly. 
 
   ```bash
    git config --global user.email "your@email.com"
    git config --global user.name "your name"
   ```
-Damit wir nicht unnötige Dateien sichern, benötigen wir eine Ausschlußliste, die wie folgt erstellt wird:
-+ Wir sollten uns derzeit noch im Verzeichnis "printer_data/config/" befinden. Wenn nicht mit nachfolgendem Befehl dort hin wechseln.
+So that we do not save unnecessary files, we need an exclusion list, which is created as follows:
++ We should currently still be in the "printer_data/config/" directory. If not, change there with the following command.
   
   ```bash
   cd ~/printer_data/config
   ```
-+ Mit diesem Befehl erstellen wir die Datei .gitignore. Wichtig ist der Punkt vor gitignore!
++ With this command we create the .gitignore file. The dot in front of gitignore is important!
   
   ```bash
   nano .gitignore
   ```
-+ Im Editor nun die Pfade der Dateien eintragen, die NICHT gesichert werden sollen. Da ich Klippain Shake&Tune installiert habe, wären das dann diese Pfade. Speichern der Datei mit STRG+O, gefolgt von Enter und dann STRG+X
++ Now enter the paths of the files that are NOT to be backed up in the editor. Since I have installed Klippain Shake&Tune, these would be the paths. Save the file with CTRL+O, followed by Enter and then CTRL+X
   
   ```bash
   K-ShakeTune_results/belts/*.csv
@@ -187,41 +187,41 @@ Damit wir nicht unnötige Dateien sichern, benötigen wir eine Ausschlußliste, 
   K-ShakeTune_results/vibrations/*.png
   ```
 > [!NOTE]
-  Das Ausschließen von Dateien ist ein optionaler Schritt! Wer alle Daten aus dem Ordner printer_data/config sichern möchte, lässt die .gitignore leer.
+  Excluding files is an optional step! If you want to save all data from the printer_data/config folder, leave the .gitignore empty.
 
-## **Das erste Backup**
-Wir sind soweit das erste Backup zu erstellen.
-+ Nachfolgenden Befehl in die Konsole einfügen:
+## **The first backup**
+We are ready to create the first backup.
++ Enter the following command in the console:
 
   ```bash
   sh autocommit.sh
   ```
-+ Wenn alle notwendigen Schritte zuvor richtig ausgeführt wurden, sollte es in der Konsole in etwas so aussehen. Da ich für diesen Guide ein eigenes System aufgesetzt habe, werden bei euch die übermittelten Daten von der Anzahl her höher sein.
++ If all the necessary steps have been carried out correctly beforehand, it should look something like this in the console. As I have set up my own system for this guide, the amount of data transmitted will be higher.
 
   ![Backup](/../main/images/backup16.png)
 
-+ Wenn der Befehl sh.autocommit.sh erneut in die Konsole eingefügt wird, ohne das es Änderungen am System gab, sollte es so wie auf dem Bild aussehen.
++ If the command sh.autocommit.sh is inserted into the console again without any changes to the system, it should look like the picture.
 
   ![BackupClean](/../main/images/backup17.png) 
 
-+ Wie eine Änderung an einer Config angezeigt wird zeigt nachfolgendes Bild. Als Beispiel dient eine Änderung in der printer.cfg
++ The following image shows how a change to a config is displayed. A change in printer.cfg serves as an example
 
   ![BackupChange](/../main/images/backup18.png)
 
-## **Historie auf Github**
-Schauen wir uns nun den Änderungsverlauf auf Github an. Im Root-Verzeichnis des Repository auf Commits klicken
+## **History on Github**
+Now let's take a look at the change history on Github. Click on Commits in the root directory of the repository
  ![Commits](/../main/images/backup19.png)
 
-Es werden alle derzeit getätigten Änderungen angezeigt. Diese werden nach Datum und Uhrzeit sortiert angezeigt.
+All changes currently made are displayed. These are displayed sorted by date and time.
 
  ![Commits2](/../main/images/backup20.png)
 
-Mit einem Klick auf eine der Commits öffnet sich die Vergleichsansicht. In diesem Fall wurde der Wert von max_accel avon 1000 auf 10000 gesetzt.
+Click on one of the commits to open the comparison view. In this case, the value of max_accel has been set from 1000 to 10000.
 
  ![Commits](/../main/images/backup21.png)
 
-## **Update per Macro**
-Um komfortabel ein Backup per Macro zu erstellen fügt ihr folgenden Code in die Datei ein, die eure Macros enthält. Solltet ihr meinen Guide des [Komplett-Updates](/Klipper-Update/update+upgrade.md) des Druckers durchgeführt haben, sollte das Macro in die Macros/macro.cfg eingefügt werden.
+## **Update via macro**
+To conveniently create a backup via macro, insert the following code into the file containing your macros. If you have followed my guide for the [complete update](/Klipper-Update/update+upgrade.md) of the printer, the macro should be inserted into the Macros/macro.cfg.
 ```bash
  [gcode_shell_command backup_cfg]
  command: ~/printer_data/config/autocommit.sh
@@ -234,29 +234,29 @@ Um komfortabel ein Backup per Macro zu erstellen fügt ihr folgenden Code in die
      RUN_SHELL_COMMAND CMD=backup_cfg
 
  [delayed_gcode auto_backups]
- initial_duration: 10 #Nach 10 Sekunden wird automatisch ein Backup erstellt
+ initial_duration: 10 #A backup is automatically created after 10 seconds
  gcode:
     RUN_SHELL_COMMAND CMD=backup_cfg
 ```
-Wir nähern uns dem Ende, benötigen aber noch das Tool "gcode_shell_command". Solltet ihr Klippain Shake&Tune installiert haben, entfällt dieser Schritt, da Klippain Shake&Tune das Script mit installiert. 
-Für den Fall das Klippain Shake&Tune noch nicht installiert wurde, gibt es jetzt 2 Wege für die Installation. 
-+ Entweder über KIAUH über Punkt 4 und dann Punkt 8.
-+ Weg 2 wäre über nachfolgenden Befehl in der Konsole:
+We are approaching the end, but still need the "gcode_shell_command" tool. If you have installed Klippain Shake&Tune, this step is not necessary as Klippain Shake&Tune installs the script as well. 
+If Klippain Shake&Tune has not yet been installed, there are now 2 ways to install it. 
++ Either via KIAUH via point 4 and then point 8.
++ Way 2 would be via the following command in the console:
 
 ```bash
  wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
 ```
-## **Ausführen des Macros**
-In der Macro-Übersicht befindet sich nun das Macro "BACKUP CFG". Dies ist der manuelle Weg seine Daten zu sichern.
+## **Executing the macro**
+The macro "BACKUP CFG" can now be found in the macro overview. This is the manual way to back up your data.
 
 ![MACRO](/../main/images/backup22.png)
 
-Zusätzlich wird bei jedem Neustart von Klipper nach 10 Sekunden das Macro automatisch aufgerufen
+In addition, the macro is automatically called up after 10 seconds each time Klipper is restarted
 
 ![MACRO](/../main/images/backup23.png)
 
-## **Backup wiederherstellen**
-Die Wiederherstellung des aktuellsten Backups erfolgt mit folgenden Befehlen. Es muss natürlich eure Token-URL eingefügt werden. Daran denken, dass in der .gitignore hinterlegte Dateien und Pfade nicht gesichert werden und dem entsprechend auch nicht wiederhergestellt werden können!
+## **Restore backup**
+The most recent backup is restored with the following commands. Of course, your token URL must be inserted. Remember that files and paths stored in the .gitignore are not backed up and therefore cannot be restored!
 
 ```bash
 cd ~/printer_data/config
@@ -267,7 +267,7 @@ cd ~/printer_data/config
  git reset --hard HEAD
 ```
 
-Wenn dir dieser Guide gefallen hat:
+If you like this guide:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G7VMD0W)
 
