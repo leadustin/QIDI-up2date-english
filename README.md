@@ -12,7 +12,7 @@ If you want to create an automated backup of all configs, macros etc. on your ow
 + [Automatic backup](Git-Backup/Autobackup.md)
 
 3D models of the print head and the assemblies of the XY axes are available here
-+ [3D-Models](3D-Modelle/3D-Modelle.md)
++ [3D-Models](3D-Modelle/3D-Models.md)
 
 If you like my work, you are welcome to support me
 
