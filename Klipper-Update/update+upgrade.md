@@ -265,7 +265,7 @@ sudo apt install python3-serial
 
 > [!WARNING]
 > ### **Flashing the print head with Klipper**
-> Make sure that you also use **EURE ID**. Enter the following command complete with **YOUR ID** in the console. You have cached **your ID** in a text file.
+> Make sure that you also use **YOUR ID**. Enter the following command complete with **YOUR ID** in the console. You have cached **YOUR ID** in a text file.
 >
 > ```bash
 > python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_EURE_ID
