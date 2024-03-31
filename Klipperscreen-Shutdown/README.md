@@ -9,6 +9,13 @@ Since abrupt power interruptions are not recommended for the Pi's SD card, the m
 
 ![Klipperscreenshutdown](/../main/images/klippershutdown1.png)
 
+## **Installation ssh pass**
+To enable the printer to establish a connection to the Raspberry Pi, we need ssh pass. The installation is started with the following command:
+
+```bash
+sudo apt install sshpass
+```
+
 The actual installation is simple. Copy the klipperscreen_shutdown.cfg and the klipperscreen_shutdown.sh and load them onto your printer.
 If you have followed the tutorial for the automatic Github backup, there is a folder called "Scripts" on the printer. The script kipperscreen_shutdown.sh is copied into this folder.
 If you have followed the guide for the total update, there is also a folder on the printer called "Macros". Copy the klipperscreen_shutdown.cfg into this folder. Basically, both folders are required and must be created if they do not exist.
