@@ -94,29 +94,41 @@ The next step is to combine the token and URL.
 
 ## **Connect to the printer via SSH**
 Connect to the printer via SSH using the tool of your choice. I use "Putty" in this guide
-+ change the directory with the following command
++ Change the directory with the following command:
 
   ```bash
   cd ~/printer_data/config
   ```
-
-+ the autocommit script is downloaded with the following command
+  
++ We need a "Scripts" folder that is created with the following command:
 
   ```bash
-  wget -O ~/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
+  mkdir Scripts
+  ```
+
++ The autocommit script is downloaded with the following command:
+
+  ```bash
+  wget -O ~/printer_data/config/Scripts/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
   ```
 
 + The next step is to select the preferred web interface. If you use Mainsail, remove the # in the Mainsail line. If you use Fluidd, select Fluidd accordingly. To do this, we open autocommit.sh with the following command
 
   ```bash
-  nano ~/printer_data/config/autocommit.sh
+  nano ~/printer_data/config/Scripts/autocommit.sh
   ```
 + The following image shows the configuration for Mainsail. Fluidd is commented out accordingly.
 
-![MainsailoderFluidd](/../main/images/backup11.png)
+![MainsailoderFluidd](/../main/images/backup_eng_11.png)
 
 + Save the autocommit.sh with CTRL+O and then Enter
 + CTRL+X closes the editor and we are back in the path "printer_data/config/"
++ With the following command we change the directory
+
+```bash
+cd Scripts
+```
+
 + With the following command we give ourselves and all other users of the system the authorization to execute the autocommit.sh
 
   ```bash
@@ -126,7 +138,7 @@ Connect to the printer via SSH using the tool of your choice. I use "Putty" in t
   ```bash
   ls -la autocommit.sh
   ```
-![Authorizations](/../main/images/backup12.png)
+![Authorizations](/../main/images/backup_eng_12.png)
 
 + For the export and backup of the data.mdb we need another tool, which is installed with the following command.
 
