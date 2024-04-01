@@ -90,7 +90,7 @@ The next step is to combine the token and URL.
 > [!NOTE]
 >  Just a reminder. The repository and token created for this guide were deleted after the guide was created!
 
-![Token+URL](/../main/images/backup10.png)
+![Token+URL](/../main/images/backup_eng_10.png)
 
 ## **Connect to the printer via SSH**
 Connect to the printer via SSH using the tool of your choice. I use "Putty" in this guide
