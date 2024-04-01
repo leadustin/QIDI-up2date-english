@@ -125,9 +125,9 @@ Connect to the printer via SSH using the tool of your choice. I use "Putty" in t
 + CTRL+X closes the editor and we are back in the path "printer_data/config/"
 + With the following command we change the directory
 
-```bash
-cd Scripts
-```
+  ```bash
+  cd Scripts
+  ```
 
 + With the following command we give ourselves and all other users of the system the authorization to execute the autocommit.sh
 
@@ -206,6 +206,7 @@ We are ready to create the first backup.
 + Enter the following command in the console:
 
   ```bash
+  cd ~/printer_data/config/Scripts
   sh autocommit.sh
   ```
 + If all the necessary steps have been carried out correctly beforehand, it should look something like this in the console. As I have set up my own system for this guide, the amount of data transmitted will be higher.
@@ -236,7 +237,7 @@ Click on one of the commits to open the comparison view. In this case, the value
 To conveniently create a backup via macro, insert the following code into the file containing your macros. If you have followed my guide for the [complete update](/Klipper-Update/update+upgrade.md) of the printer, the macro should be inserted into the Macros/macro.cfg.
 ```bash
  [gcode_shell_command backup_cfg]
- command: ~/printer_data/config/autocommit.sh
+ command: ~/printer_data/config/Scripts/autocommit.sh
  timeout: 30
  verbose: True
 
