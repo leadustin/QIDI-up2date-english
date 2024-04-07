@@ -268,7 +268,7 @@ sudo apt install python3-serial
 > Make sure that you also use **YOUR ID**. Enter the following command complete with **YOUR ID** in the console. You have cached **YOUR ID** in a text file.
 >
 > ```bash
-> python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_EURE_ID
+> python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_YOUR_ID
 > ```
 
 This is how it should look in the console:
