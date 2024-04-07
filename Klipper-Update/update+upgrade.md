@@ -604,8 +604,8 @@ sudo nano KlipperScreen.conf
 ```bash
 [main]
 
-[printer Name_wie_euer_Drucker_angezeigt_werden_soll]
-moonraker_host: IP eueres Druckers
+[printer Name_how_your_printer_should_be_displayed]
+moonraker_host: printer IP
 moonraker_port: 7125
 ```
 
