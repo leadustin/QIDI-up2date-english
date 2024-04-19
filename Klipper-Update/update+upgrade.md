@@ -492,8 +492,8 @@ After installing Spoolman, the tool can be accessed via the IP of your printer a
 
 > [!NOTE]
 > As we have discovered, the original display cannot currently be used after the system update.
-> However, it is possible to restore touchscreen operation. The keyword here is "Klipperscreen".
-> Klipperscreen is based on Octoscreen and offers a graphical interface for controlling one or more printers.
+> However, it is possible to restore touchscreen operation. The keyword here is "KlipperScreen".
+> KlipperScreen is based on Octoscreen and offers a graphical interface for controlling one or more printers.
 >
 > I describe here the replacement of the original display with a 5 inch touch display in combination with a Raspberry Pi as a permanently installed display.
 
@@ -555,7 +555,7 @@ end elecrow-pitft-setup
 + If the WLAN data has been entered correctly, the Raspberry should appear in the network overview of your router within a short time. As with the printer, make a fixed IP assignment here too.
 The typical start sequence should now run on the display.
 
-### *Installation KIUAH and Klipperscreen.*
+### *Installation KIUAH and KlipperScreen.*
 
 + Open Putty and create a connection as with the printer.
 + Log in with mks/makerbase
@@ -573,14 +573,14 @@ cd ~ && git clone https://github.com/dw-0/kiauh.git
 ./kiauh/kiauh.sh
 ```
 
-+ Switch to installation mode in the main menu of KIAUH via point 1 and select point 5 - Clipper screen
++ Switch to installation mode in the main menu of KIAUH via point 1 and select point 5 - KlipperScreen
 + After completing the installation and returning to the main menu, it should look like this.
 
 ![Klipperscreen](/../main/images/klipperscreen1.png)
 
 + Exit KIAUH with Q
 
-In order for Klipperscreen to interact with Moonraker, we need a few more folders/files.
+In order for KlipperScreen to interact with Moonraker, we need a few more folders/files.
 
 + Add the following commands to the console:
 
