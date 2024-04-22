@@ -507,7 +507,7 @@ After installing Spoolman, the tool can be accessed via the IP of your printer a
 + 1x <a href="https://www.amazon.de/s?k=hdmi+winkel+kabel&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2GQAXFYRU6MAA&sprefix=hdmi+winkel+kabel+%2Caps%2C139&tag=drucktipps3d-21&ref=nb_sb_noss_2" target="_blank" rel="noopener noreferrer">HDMI-Cable</a> - As flexible as possible and with small plugs or angled plugs - measure out your path for the cable and use a sufficiently long cable.
 + 1x <a href="https://www.amazon.de/s?k=usb+kabel&crid=KCV1Z6W6QX2H&sprefix=USB+K%2Caps%2C116&ref=nb_sb_ss_ts-doa-p_1_5" target="_blank" rel="noopener noreferrer">USB-Cable</a> - depending on the type of USB connection of the display - also measure the installation length here.
 + 1x <a href="https://www.amazon.de/s?k=micro+sd+karte&crid=2700GPKRVNBPD&sprefix=Micro+Sd%2Caps%2C128&ref=nb_sb_ss_ts-doa-p_1_8" target="_blank" rel="noopener noreferrer">MicroSD-Card</a>
-+ 1x <a href="https://www.amazon.de/s?k=Inbus&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=14CFHDZSQ958R&sprefix=inbus%2Caps%2C107&ref=nb_sb_noss_1" target="_blank" rel="noopener noreferrer">Inbus-Set</a>
++ 1x <a href="https://www.amazon.de/s?k=Inbus&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=14CFHDZSQ958R&sprefix=inbus%2Caps%2C107&ref=nb_sb_noss_1" target="_blank" rel="noopener noreferrer">Allen Key Set</a>
 
 
 ### Software für Display:
