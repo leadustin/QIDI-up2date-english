@@ -48,6 +48,7 @@ What is needed?
 + <a href="https://www.amazon.com/s?k=sd+card+adapter+usb&crid=15YOTDZUGFJQ2&sprefix=sd+card+a%2Caps%2C113&ref=nb_sb_ss_ts-doa-p_2_9" target="_blank" rel="noopener noreferrer">SD card adapter to MicroSD or USB adapter to MicroSD</a>
 + <a href="https://www.amazon.com/s?k=micro+sd+karte&crid=3IBXHOHP33HS4&sprefix=micro%2Caps%2C111&ref=nb_sb_ss_ts-doa-p_1_5" target="_blank" rel="noopener noreferrer">MicroSD-card - max 32GB</a>
 + Optional 5+ inch touch display and a Raspberry version 3 or higher
++ Tablet or smartphone - instead of the version with touch display and Raspberry Pi
 
 
 ### **Software Update OS**
@@ -495,7 +496,7 @@ After installing Spoolman, the tool can be accessed via the IP of your printer a
 > However, it is possible to restore touchscreen operation. The keyword here is "KlipperScreen".
 > KlipperScreen is based on Octoscreen and offers a graphical interface for controlling one or more printers.
 >
-> I describe here the replacement of the original display with a 5 inch touch display in combination with a Raspberry Pi as a permanently installed display.
+> I describe here the replacement of the original display with a 5 inch touch display in combination with a Raspberry Pi as a permanently installed display. Alternatively, the variant with an old tablet and VNC can also be used and is also described.
 
 **What do we need for this?**
 
@@ -671,6 +672,71 @@ This is what the whole thing looks like in action and permanently installed in t
 And another screen.
 
 ![Display](/../main/images/display2.png)
+
+## **Alternative for the touchscreen**
+
+If you want to save the cost of a touch display and a Raspberry Pi, you can also use an old smartphone or tablet. 
+> [!IMPORTANT]
+> Depending on the performance of the smartphone or tablet used and the network, the experience may differ from a natively used Klipperscreen.
+
+### **Installation on the printer**
+
+We connect to the printer via putty and start KIAUH and install Klipperscreen via menu item 1. This will take a few minutes. When asked whether it should be installed as stand-alone, please answer Yes.
+
+The next step is to install a VNC server. Copy the following command into the console:
+```bash
+sudo apt install tigervnc-standalone-server
+```
+The next step is to create the launch_KlipperScreen.sh.
++ Enter the following into the console:
+```bash
+cd ~/KlipperScreen/scripts/
+nano launch_KlipperScreen.sh
+```
+After the nano editor has opened, insert the following:
+```bash
+#!/bin/bash
+# Use display 10 to avoid clashing with local X server, if any
+Xtigervnc -rfbport 5900 -noreset -AlwaysShared -SecurityTypes none :10&
+DISPLAY=:10 $KS_XCLIENT&
+wait
+```
+> [!TIP]
+> If the resolution of the screen is to be adjusted, please include the following argument.
+> Adjust the 1280x720 according to your display.
+> ```bash
+> -geometry 1280x720
+> ```
+
+When everything has been inserted, save and exit the editor
++ In nano, press Ctrl+O (to save), then Enter and Ctrl+X (to exit the editor).
+
+Now the previously created file must also be made executable. To do this, enter the following into the console:
+```bash
+chmod +x ~/KlipperScreen/scripts/launch_KlipperScreen.sh
+```
+
+The next step is to restart Klipperscreen. Copy the following into the console
+```bash
+sudo systemctl restart KlipperScreen.service
+```
+We are now finished with the installation on the printer.
+
+### **Installation on the tablet/ smartphone**
+
+The next step is to install a VNC viewer on the smartphone or tablet. I recommend the AVNC app. Download via Github or directly from the Google Play Store.
+Everyone should know how to install an app from the Play Store.
+
++ <a href="https://github.com/gujjwal00/avnc" target="_blank" rel="noopener noreferrer">AVNC</a>
+
+Create a new server in the tool. The IP of the printer and a meaningful name are entered here. If the message of a non-encrypted connection is displayed, ignore it and deactivate the message. 
+
+If everything has been installed correctly, Klipperscreen should now appear on the display.
+
+2 settings still need to be made on Klipperscreen. 
++ In the Klipperscreen settings, deactivate the "Screen DPMS" item and set "Screen Power Off Time" to "Never".
+
+Congratulations - you're done.
 
 If you liked this guide:
 
