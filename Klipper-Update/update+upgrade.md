@@ -22,8 +22,8 @@ However, the bottleneck of the Series 3 is the outdated software. A comparison s
 | Armbian Buster  | Armbian Bookworm  |
 | Klipper 0.10.x  | Klipper 0.12.x  |
 | Moonraker 0.7.x  | Moonraker 0.8.x  |
-| Fluidd 1.19.x  | Fluidd 1.28.x |
-| Mainsail?  | Mainsail 2.10  |
+| Fluidd 1.19.x  | Fluidd 1.30.x |
+| Mainsail?  | Mainsail 2.11  |
 | Python 2.7 und 3.7  | Python 3.12 |
 
 Updating the entire system gives you the option of using all the latest software and adding some useful tools to the printer. The storage space required on the EMMC is reduced from the current 6.5GB to around 3GB. If you want to continue using the original memory card, this is a factor that should not be underestimated.
