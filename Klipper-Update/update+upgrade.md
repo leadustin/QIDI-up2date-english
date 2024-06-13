@@ -131,6 +131,10 @@ An error message is displayed because outdated Klipper firmware is installed on 
 ![MCU-Error](/../main/images/klipper_mcu_error.png)
 
 ## **Flashing the printhead - Introduction**
+> [!CAUTION]
+> It is important that you disconnect ALL USB devices from the mainboard before updating the print head.
+> These are devices such as a webcam or the WLAN dongle.
+> Failure to do so will result in problems during the update process.
 
 To flash the print head, we need to put it into "DFU mode". This requires physically pressing 2 buttons. This step will be explained in more detail later.
 
