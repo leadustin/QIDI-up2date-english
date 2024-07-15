@@ -59,6 +59,7 @@ What is needed?
 + <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Imager</a> - required for the installation of the display
 + <a rel="noopener noreferrer" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">Putty</a> - Tool to access the printer via SSH
 + <a href="https://winscp.net/eng/download.php" target="_blank" rel="noopener noreferrer">WinSCP</a> - Tool for accessing the printer via FTP
++ <a href="https://mobaxterm.mobatek.net/" target="_blank" rel="noopener noreferrer">MobaXterm</a> - Alternative for Putty and WinSCP
 
 ### **Backup**
 
