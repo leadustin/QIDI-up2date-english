@@ -252,9 +252,9 @@ To conveniently create a backup via macro, insert the following code into the fi
     RUN_SHELL_COMMAND CMD=backup_cfg
 ```
 We are approaching the end, but still need the "gcode_shell_command" tool. If you have installed Klippain Shake&Tune, this step is not necessary as Klippain Shake&Tune installs the script as well. 
-If Klippain Shake&Tune has not yet been installed, there are now 2 ways to install it. 
+If Klippain Shake&Tune has not yet been installed, there are now 2 options to install it. 
 + Either via KIAUH via point 4 and then point 8.
-+ Way 2 would be via the following command in the console:
++ Option 2 would be via the following command in the console:
 
 ```bash
  wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
