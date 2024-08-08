@@ -11,6 +11,9 @@ With this macro, the Raspberry Pi used for the display swap can be safely shut d
 If you want to create an automated backup of all configs, macros etc. on your own Github repository, you will find a solution here.
 + [Automatic backup](Git-Backup/Autobackup.md)
 
+This macro can be used to dry wet filament over the print bed.
++ [Filament dryer](dryer/dryer.md)
+
 3D models of the print head and the assemblies of the XY axes are available here
 + [3D-Models](3D-Models/3D-Models.md)
 
