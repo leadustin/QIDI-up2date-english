@@ -15,7 +15,7 @@ To allow moist air to escape, the tin must be provided with holes through which 
 
 ## Installation
 
-Once the printer has been customised according to my <a https://github.com/leadustin/QIDI-up2date-english/blob/main/Klipper-Update/update%2Bupgrade.md">guide</a>, the drying.cfg file can be copied to the macros folder.
+Once the printer has been customised according to my <a href="https://github.com/leadustin/QIDI-up2date-english/blob/main/Klipper-Update/update%2Bupgrade.md">guide</a>, the drying.cfg file can be copied to the macros folder.
 Then include the file in the printer.cfg via include.
 ```bash
 [include Macros/drying.cfg]
