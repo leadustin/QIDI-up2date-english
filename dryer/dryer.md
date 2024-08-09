@@ -2,7 +2,7 @@
 
 This macro makes it possible to dry moist filament via the heating bed of the Qidi Max-3, Plus-3 and similar printers.
 The PIN assignments of the fans may have to be adjusted accordingly for non-QIDI printers. 
-If the printer does not have an active installation space heater, this must also be commented out accordingly.
+If the printer does not have an active chamber heater, this must also be commented out accordingly.
 
 For the actual drying process, it is advisable to use an appropriately sized aluminium can in which to place the filament roll. The base of the tin should lie flat on the heating bed.
 This creates a build-up of heat inside the tin.
@@ -25,7 +25,7 @@ As soon as Mainsail has loaded the web interface, there are 3 new macros in the 
 + STOP_DRYING
 + STATUS_DRYING
 
-STATUS_TROCKNUNG is automatically executed by START_TROCKNUNG and can therefore be hidden in the macro configuration menu.
+STATUS_DRYING is automatically executed by START_TROCKNUNG and can therefore be hidden in the macro configuration menu.
 
 ### Configuration and function of the START_TROCKNUNG macro
 The small arrow to the right of the macro button opens the configuration menu. The following menu items can be configured:
