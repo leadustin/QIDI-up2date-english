@@ -25,9 +25,9 @@ As soon as Mainsail has loaded the web interface, there are 3 new macros in the 
 + STOP_DRYING
 + STATUS_DRYING
 
-STATUS_DRYING is automatically executed by START_TROCKNUNG and can therefore be hidden in the macro configuration menu.
+STATUS_DRYING is automatically executed by START_DRYING and can therefore be hidden in the macro configuration menu.
 
-### Configuration and function of the START_TROCKNUNG macro
+### Configuration and function of the START_DRYING macro
 The small arrow to the right of the macro button opens the configuration menu. The following menu items can be configured:
 + Z-displacement of the print bed - value in mm
 + Chamber - value in degrees Celsius
@@ -45,9 +45,9 @@ The small arrow to the right of the macro button opens the configuration menu. T
 When the macro is executed, the system checks whether the printer is already homed. After checking, the print bed moves down by the value set in the macro.
 This is necessary because the filament roll must fit between the print head and the heating bed.
 
-### Construction space with construction space heating
+###  Active chamber heater
 
-The active build space heating can be configured here. Values are given in degrees Celsius.
+The active chamber heating can be configured here. Values are given in degrees Celsius.
 
 ### Print bed
 
