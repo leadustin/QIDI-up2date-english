@@ -1,6 +1,6 @@
 # **Filament drying per print bed**
 
-This macro makes it possible to dry moist filament via the heating bed of the Qidi Max-3, Plus-3 and similar printers.
+This macro makes it possible to dry moist filament via the print bed of the Qidi Max-3, Plus-3 and similar printers.
 The PIN assignments of the fans may have to be adjusted accordingly for non-QIDI printers. 
 If the printer does not have an active chamber heater, this must also be commented out accordingly.
 
