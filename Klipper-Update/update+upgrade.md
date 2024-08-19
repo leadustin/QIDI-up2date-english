@@ -479,7 +479,9 @@ managed_services: klipper
 > The macros "BELTS_SHAPER_CALIBRATION" and "AXES_SHAPER_CALIBRATION" are used to carry out various tests and finally display them in a graphic. Please "home" the printer before using the macros.
 
 ### Spoolman
-Spoolman is a filament management tool that logs filament consumption.
+Spoolman is a filament management tool that logs filament consumption. Spoolman can now be easily installed via KIAUH. To start the installation, select menu item 1 Installation and then follow the installation steps via item 13. Install Spoolman as a self-starting service.
+
+If you prefer to work directly in the console, you can still install manually
 
 + Copy the following commands and paste them into the console:
 
