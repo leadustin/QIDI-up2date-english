@@ -512,7 +512,7 @@ repo: Donkie/Spoolman
 path: ~/Spoolman
 ```
 
-After installing Spoolman, the tool can be accessed via the IP of your printer and port 7912.
+After installing Spoolman, the tool can be accessed via the IP of your printer and port 7912. or directly in Mainsail.
 
 ![Spoolman](/../main/images/spoolman1.png)
 
