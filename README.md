@@ -1,6 +1,6 @@
 # **Qidi Up2date**
 This repository is about updating the Qidi Series 3 to the latest software including some useful and optional tools as well as the conversion of the original display to a new display running on the Klipperscreen.
-Currently the guides are compatible with the Qidi X-Max 3 and the X-Plus 3.
+The guides are compatible with the Qidi X-Max 3, X-Plus 3 and the Smart 3.
 
 For the complete conversion of the printer, you should follow this guide. It describes how to update the printer's old software to the latest version.
 + [Total conversion](Klipper-Update/update+upgrade.md)
