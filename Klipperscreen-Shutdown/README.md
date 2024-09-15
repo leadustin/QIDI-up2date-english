@@ -1,6 +1,12 @@
 # **Shutdown Klipperscreen**
 > [!NOTE]
-> This macro is only useful if you have followed the procedure described in [Total conversion](Klipper-Update/update+upgrade.md) regarding the display replacement! 
+> This macro is only useful if you have followed the procedure described in [Total conversion](Klipper-Update/update+upgrade.md) regarding the display replacement! The "gcode_shell_command" tool must be installed for the script to work. If Klippain Shake&Tune from the Klipper Update Tutorial is already installed, the following step is not necessary as the tool has already been installed. If Klippain Shake&Tune has not been installed, the following steps must be carried out.
++ KIAUH via point 4 and then point 8.
++ Option 2 would be via the following command in the console:
+
+```bash
+ wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
+```
 ## **Installation of a macro to shut down the Raspberry running Klipperscreen via macro.**
 
 With this macro, the Raspberry Pi can be shut down conveniently from Mainsail. This is useful if the printer is set up away from the PC.
