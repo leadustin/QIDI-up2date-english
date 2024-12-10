@@ -1,6 +1,6 @@
 # **Update Qidi Series 3**
 This guide describes how to update the Qidi X-Plus 3 or the Qidi X-Max 3 to the latest software including some useful and optional tools.
-This guide is compatible with the **Qidi X-Max 3 and the X-Plus 3.**
+This guide is compatible with the **Qidi X-Max 3 X-Plus 3 and the X-Smart 3.**
 
 This tutorial is based on the work of coco.33 and was published in its original version on <a href="https://github.com/Phil1988/FreeQIDI">FreeQIDI</a>
 and refers to the Qidi X-3 series.
