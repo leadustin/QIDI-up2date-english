@@ -1,6 +1,6 @@
 # **Github-Backup**
 This guide is based on the work of <a href="https://github.com/EricZimmerman">Eric Zimmerman</a> and describes how to upload configs, macros etc. manually or automatically to your own Github repository and, if necessary, restore them as a backup on your 3D printer.
-To make it easier to follow the guide, all console commands are prepared for copy&paste. Images have also been added to this guide to make individual steps easier to understand.
+To make it easier to follow the guide, all console commands are prepared for copy & paste. Images have also been added to this guide to make individual steps easier to understand.
 > [!IMPORTANT]
 > The access token shown in this guide and the repository were only created for this guide. Both have already been deleted. Just in case someone tries to gain access with this data. 😄
 
