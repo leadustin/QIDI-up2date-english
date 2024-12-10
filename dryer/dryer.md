@@ -60,7 +60,7 @@ The drying time defines how long the drying process takes. Values are given in m
 
 ### Air circulation
 
-The side fan is configured under Recirculation. Speed values are entered in per cent.
+The side fan is configured under Recirculation. Speed values are entered in percent.
 
 ### Running time_recirculation
 
