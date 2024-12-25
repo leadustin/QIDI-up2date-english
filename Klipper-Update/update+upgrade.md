@@ -22,7 +22,7 @@ However, the bottleneck of the Series 3 is the outdated software. A comparison s
 | Armbian Buster  | Armbian Bookworm  |
 | Klipper 0.10.x  | Klipper 0.12.x  |
 | Moonraker 0.7.x  | Moonraker 0.9.x  |
-| Fluidd 1.19.x  | Fluidd 1.30.x |
+| Fluidd 1.19.x  | Fluidd 1.31.x |
 | Mainsail?  | Mainsail 2.13  |
 | Python 2.7 und 3.7  | Python 3.12 |
 
