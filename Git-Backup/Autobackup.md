@@ -103,19 +103,19 @@ Connect to the printer via SSH using the tool of your choice. I use "Putty" in t
 + We need a "Scripts" folder that is created with the following command:
 
   ```bash
-  mkdir Scripts
+  mkdir scripts
   ```
 
 + The autocommit script is downloaded with the following command:
 
   ```bash
-  wget -O ~/printer_data/config/Scripts/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
+  wget -O ~/printer_data/config/scripts/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
   ```
 
 + The next step is to select the preferred web interface. If you use Mainsail, remove the # in the Mainsail line. If you use Fluidd, select Fluidd accordingly. To do this, we open autocommit.sh with the following command
 
   ```bash
-  nano ~/printer_data/config/Scripts/autocommit.sh
+  nano ~/printer_data/config/scripts/autocommit.sh
   ```
 + The following image shows the configuration for Mainsail. Fluidd is commented out accordingly.
 
@@ -126,7 +126,7 @@ Connect to the printer via SSH using the tool of your choice. I use "Putty" in t
 + With the following command we change the directory
 
   ```bash
-  cd Scripts
+  cd scripts
   ```
 
 + With the following command we give ourselves and all other users of the system the authorization to execute the autocommit.sh
@@ -206,7 +206,7 @@ We are ready to create the first backup.
 + Enter the following command in the console:
 
   ```bash
-  cd ~/printer_data/config/Scripts
+  cd ~/printer_data/config/scripts
   sh autocommit.sh
   ```
 + If all the necessary steps have been carried out correctly beforehand, it should look something like this in the console. As I have set up my own system for this guide, the amount of data transmitted will be higher.
@@ -237,7 +237,7 @@ Click on one of the commits to open the comparison view. In this case, the value
 To conveniently create a backup via macro, insert the following code into the file containing your macros. If you have followed my guide for the [complete update](/Klipper-Update/update+upgrade.md) of the printer, the macro should be inserted into the Macros/macro.cfg.
 ```bash
  [gcode_shell_command backup_cfg]
- command: ~/printer_data/config/Scripts/autocommit.sh
+ command: ~/printer_data/config/scripts/autocommit.sh
  timeout: 30
  verbose: True
 
