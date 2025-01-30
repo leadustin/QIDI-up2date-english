@@ -215,7 +215,7 @@ You will be asked for the password of the user mks. Enter makerbase here.
 The following commands flash Katapult onto the print head:
 
 ```bash
-sudo cp out/katapult.uf2 /mnt
+sudo cp out/katapult.withclear.uf2 /mnt
 sudo umount /mnt
 ```
 
